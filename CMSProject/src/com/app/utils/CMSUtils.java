@@ -34,6 +34,4 @@ public class CMSUtils {
 		throw new CMSException("Invalid password , Login Failed");
 
 	}
-
-
 }

@@ -44,6 +44,7 @@ public class CMSApplication {
 						
 					case 3://login
 						System.out.println("Enter email and password:");
+						
 						customer=CMSUtils.authenticateCustomer(sc.next(),sc.next(),customerList);
 						break;
 						
@@ -59,6 +60,10 @@ public class CMSApplication {
 						CMSUtils.deleteCustomerDetails(sc.next(), customerList);
 						break;
 
+					case 6://age check >21
+						CMSValidations.parseAndValidateBirthDate(sc.next());
+						
+						break;
 					case 0:// Exit
 						exit = true;
 						break;

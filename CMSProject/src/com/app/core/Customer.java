@@ -97,3 +97,12 @@ public class Customer {
 		}
 			
 }
+
+/*Sample data
+ * 
+ * radha kulkarni radha@gmail.com Radh@123 1000 1998-01-01 Silver
+ * mayra patil mayra@gmail.com M@yra123 2000 1996-08-01 Gold
+ * prajakta mujumdar prajakta@gmail.com Pr@jakta12 5000 1998-01-01 Diamond
+ * 
+ * 
+ * */
