@@ -1,8 +1,12 @@
 package com.app.utils;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.app.core.Customer;
+import com.app.core.ServicePlan;
+import com.app.core.ServicePlan.*;
 import com.app.custom_exceptions.CMSException;
 
 public class CMSUtils {
@@ -34,4 +38,27 @@ public class CMSUtils {
 		throw new CMSException("Invalid password , Login Failed");
 
 	}
+	
+	//Sample data
+	public static List<Customer> sampleData()
+	{
+		Customer c1=new Customer("radha", "kulkarni","radha@gmail.com","Radh@123", 1000 ,LocalDate.parse("1998-01-01"),ServicePlan.SILVER);
+		Customer c2=new Customer("mayra", "patil" ,"mayra@gmail.com", "M@yra123", 2000 ,LocalDate.parse("1996-08-01"), ServicePlan.GOLD);
+		Customer c3=new Customer("prajakta", "mujumdar" ,"prajakta@gmail.com", "Pr@jakta12", 5000 ,LocalDate.parse("1998-01-01"), ServicePlan.DIAMOND);
+		
+		Customer[] customer= {c1,c2,c3};
+		List<Customer> list=new ArrayList<Customer>();
+		for(Customer c:customer)
+			list.add(c);
+		return list;
+	}
 }
+
+/*Sample data
+ * 
+ * radha kulkarni radha@gmail.com Radh@123 1000 1998-01-01 Silver
+ * mayra patil mayra@gmail.com M@yra123 2000 1996-08-01 Gold
+ * prajakta mujumdar prajakta@gmail.com Pr@jakta12 5000 1998-01-01 Diamond
+ * 
+ * 
+ * */
