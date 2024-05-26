@@ -62,15 +62,18 @@ public class CMSApplication {
 						customer.setPassword(sc.next());
 						System.out.println("password changed !");
 						break;
-					case 5:
+					case 5://unsubscribe
 						System.out.println("Enter email to unsubscribe");
 						CMSUtils.deleteCustomerDetails(sc.next(), customerList);
 						break;
 
 					case 6:// Display customer details sorted as per the email (asc) : using natural
 							// ordering
+						System.out.println("in sort by email");
 						Collections.sort(customerList, new SortByEmail());
-						System.out.println("case 6");
+						//display sort by email list
+						for (Customer c : customerList)
+							System.out.println(c);
 						break;
 						
 					case 7:// age check >21

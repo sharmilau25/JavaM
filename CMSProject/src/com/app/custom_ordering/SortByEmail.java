@@ -1,6 +1,7 @@
 package com.app.custom_ordering;
 
 import java.util.Comparator;
+import java.util.Iterator;
 
 import com.app.core.Customer;
 
@@ -10,6 +11,7 @@ public class SortByEmail implements Comparator<Customer> {
 	public int compare(Customer o1, Customer o2) {
 		System.out.println("in compare of sort by email");
 		return o1.getEmail().compareTo(o2.getEmail());
+		
 	}
 
 }
